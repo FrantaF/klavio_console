@@ -29,8 +29,7 @@ Once you are on the desired page, open your Developer Tools using Ctrl+Shift+I (
 
 Your Klaviyo Console will initially not show any activity. Unless you are already an identified user, Klaviyo tracking will not be activated for you. Navigate to the Console tab of your Developer Tools and paste the following script. This will identify you as a customer with the specified parameters and will initiate Klaviyo tracking. 
 
-
-4 - (Optional) If you are not an already identified customer on your chosen website, copy-paste the following command in the Console and confirm this by pressing ENTER. This will initiate Klaviyo tracking (as only identified customers are tracked). Note: should you be an already identified customer, you may need to refresh the page initially or simply start navigating to other parts of the website in order to start seeing events tracked with Klaviyo.
+If you are not an already identified customer on your chosen website, copy-paste the following command in the Console and confirm this by pressing ENTER. This will initiate Klaviyo tracking (as only identified customers are tracked). 
 - _learnq.push(['identify', {
     '$email': 'YOUR_EMAIL@EMAIL.COM',
     '$first_name': 'FIRST_NAME',
@@ -38,6 +37,8 @@ Your Klaviyo Console will initially not show any activity. Unless you are alread
   }]);
   
   ![image](https://user-images.githubusercontent.com/20789437/136281903-06d96bd6-ff50-4d28-9e4e-fb9cdce957ca.png)
+  
+Note: should you be an already identified customer, you may need to refresh the page initially or simply start navigating to other parts of the website in order to start seeing events tracked with Klaviyo.
   
 Now you can navigate back into the Klaviyo Console within the Developer Tools. As you browse through the website, events tracked with Klaviyo will appear in the console (latest event on top). You can get more information about each event by clicking on it. The output of the console can be cleared with the 'Clear' button.
 
