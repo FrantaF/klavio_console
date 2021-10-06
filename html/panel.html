@@ -1,0 +1,83 @@
+<html>
+<head>
+    <title>Klaviyo</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        /* Console header */
+        #logo-bar {
+            background-color: #373F47;
+            width: 100%;
+            height: 60px;
+            color: white;
+            background-image: url(https://www.klaviyo.com/media/images/logos/logo-klaviyo-with-white-text.svg);
+            padding-left: 24px;
+            padding-right: 16px;
+            width: 100%;
+            height: 64px;         
+            background-size: 130.26px 30px;
+            background-repeat: no-repeat;
+            background-position: left;
+            line-height: 40px;
+            font-size: 29px;
+            display: block;
+            color: #DFE3E6;
+            text-decoration: none;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }        
+
+        #logo-bar button {
+            float: right;
+            margin: 16px 16px;
+            height: 30px;
+            width: 65px;
+        }
+
+        #store-meta-data {
+            background: #dfe3e6;
+            height: 30px;
+            padding: 10px;
+            line-height: 30px;
+        }
+
+        /* Klaviyo events */
+        .event-item {
+            background-color: #777;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            border: 1px solid white;
+        }
+
+        .active, .event-item:hover {
+          background-color: #555;
+        }
+
+        .content {
+          padding: 0 18px;
+          display: none;
+          overflow: hidden;
+          background-color: #f1f1f1;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="logo-bar">
+        <button id="clear-btn">Clear</button>
+    </div>  
+    <div id="store-meta-data">
+        <span><b>Store Token:</b> <span id="store-token"></span></span>   
+    </div> 
+    <div id="event-list"></div>
+</body>
+</html>
