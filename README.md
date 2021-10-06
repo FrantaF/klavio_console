@@ -40,3 +40,24 @@ Your Klaviyo Console will initially not show any activity. Unless you are alread
   ![image](https://user-images.githubusercontent.com/20789437/136281903-06d96bd6-ff50-4d28-9e4e-fb9cdce957ca.png)
   
 Now you can navigate back into the Klaviyo Console within the Developer Tools. As you browse through the website, events tracked with Klaviyo will appear in the console (latest event on top). You can get more information about each event by clicking on it. The output of the console can be cleared with the 'Clear' button.
+
+# Known limitations:
+- Assuming store token to have 6 chars (this is based on observation).
+- Updating store token with every request is wasteful - however, implementing a simple condition using a local JS variable can fail to load the token on first page load (e.g., after identification) and then the token is never retrieved.
+- Accessing first element of: request.postData.params, doesn't feel right but in practise seems to work.
+- The plugin may log errors with accessing the DevTools 'panel'. In practise this doesn't seem to be causing any issues however.
+- jQuery could be used for cleaner looking code.
+- Investment should be made in development environment with a live-reload functionality; should further work be done on the project.
+- Console logs have been intentionally left in the code.
+- Debugging is unlikely to be done on mobile devices and attention was not paid to responsiveness.
+- Due to currently minimal styling, styles have been applied directly within panel.html for simplicity (as the stylesheet would need to be injected using a JS event listener) and within popup.html (as only a single style has been applied to the body tag).
+- As of submission, only a limited testing environment has been prepared. Custom Klaviyo events have been added to the Shopify store on the index page and 'products' page, but only a single product has been created. Klaviyo tracking has also been added to product.liquid. As this is a development store, purchases cannot be completed. 
+- Only a single size icon has been used for the Chrome extension.
+- Testing_only_sample_output.js is part of the extension. This doesn't cause any issues, but the file is not necessary as it is only used as a reference guide for testing. 
+
+# Further feature suggestions:
+- Search for events by event name.
+- Further UI enhancements.
+- More extensive documentation.
+- Start/stop console functionality could be added.
+- Further language options could be added.
